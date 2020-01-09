@@ -1,0 +1,137 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    .footer{
+        background-color: @c-primary_color;
+        border-top: 5px solid @c-border-color;
+        padding: 5rem 0;
+        h6{
+            color: @c-white_color;
+            font-size: 1.6rem;
+            margin: 0 0 1.5rem 0;
+        }
+        ul{
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            a{
+                color: @c-white_color;
+                position: relative;
+                &::after
+                {
+                    content: "";
+                    position: absolute;
+                    .transition (transform .5s ease);
+                    transform: scalex(0);
+                    transform-origin: right;
+                    width: 100%;
+                    background: @c-white_color;
+                    height: 2px;
+                    left: 0;
+                    bottom: 0;
+                }
+                &:hover{
+                    &::after
+                    {
+                        transform: scalex(1);
+                        transform-origin: left;
+                    }
+                    
+                }
+            }
+        }
+        p{
+            color: @c-white_color;
+        }
+        
+        .social{
+            border-bottom: 2px solid #ffffff63;
+            padding-bottom: 1rem;
+            a{
+                display: inline-block;
+                &:hover{
+                  
+                    i{
+                        background-color: @color-white;
+                        
+                        &::after{
+                            color: @c-primary_color;
+                            
+                        }
+                    }
+                }
+            }
+            i{
+                background-color: #00000045;
+                padding: 8px 6px;
+                border: 2px solid @c-border-color;
+                font-style: normal;
+                display: inline-block;
+            }
+            .fb,
+            .twit,
+            .pin,
+            .insta{
+                &::after{
+                    font-family: @icons__font-name_ps;
+                    font-size: 20px;
+                    color: @c-white_color;
+                }
+            }
+            .fb{
+                &::after{
+                    content: "\e901";
+                }
+            }
+            .twit{
+                &::after{
+                    content: "\e902";
+                }
+            }
+            .pin{
+                &::after{
+                    content: "\e903";
+                }
+            }
+            .insta{
+                &::after{
+                    content: "\e904";
+                }
+            }
+        }
+        .copy{
+            padding-top: 1rem;
+        }
+    }
+
+
+}
+
+
+@media (max-width:1200px){
+    .footer{
+        .container-lg{
+            .footer-part{
+                &:first-child {
+                    order: 5;
+                    padding-top: 2rem;
+                }
+            }
+        }
+    }
+}
+
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+
+    .footer{
+        padding: 1rem 0 2rem;
+        .footer-part{
+            padding: 2rem 1.5rem 0;
+        }
+    }
+
+}

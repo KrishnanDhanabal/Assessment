@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="top.links">
+            <referenceBlock name="my-account-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Account</argument>
+                    <argument name="sortOrder" xsi:type="number">110</argument>
+                </arguments>
+            </referenceBlock>
+        </referenceBlock>
+        <move element="customer.new" destination="customer_form_login" after="-" />
+    </body>
+</page>

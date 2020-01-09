@@ -1,0 +1,135 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    input[type="text"], 
+    input[type="password"], 
+    input[type="url"], 
+    input[type="tel"], 
+    input[type="search"], 
+    input[type="number"], 
+    input[type="datetime"], 
+    input[type="email"],
+    select{
+        border-color: #dce2e8;
+        padding: 20px;
+        &:focus{
+            box-shadow: none;
+        }
+    }
+
+    select{
+        padding: 0;
+        height: 42px;
+        &:not([disabled]):focus{
+            box-shadow: none;
+        }
+    }
+
+    .shipping-information{
+        .shipping-information-content{
+            border: 1px solid #dce2e8;
+            padding: 2rem;
+            margin: 1rem 0;
+        }
+    }
+    
+
+    .action.action-edit,
+    .action.action-apply{
+        background: #dce2e8;
+        color: #000;
+        font-weight: 700;
+        padding: 1rem 4rem;
+        font-size: 1.4rem;
+        border-radius: 3px;
+        text-transform: capitalize;
+    }
+
+    .common-head{
+        margin: 5rem 7rem;
+        h1{
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0 0 3rem 0;
+            font-size: 2.2rem;
+            font-weight: 600;
+        }
+        .line-container{
+            text-align: center;
+            margin-bottom: 1rem;
+            .line{
+                &::after{
+                    content: "\e906";
+                    font-family: @icons__font-name_ps;
+                    color: @c-primary_color;
+                }
+            }
+            &::before,
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: 10px;
+                left: 0;
+                border-bottom: 2px solid #e0dada8c;
+                width: 48%;
+            }
+            &::after{
+                right: 0;
+                left: unset;
+            }
+        }
+    }
+
+    .product-container {
+        margin: .5rem 0;
+        position: relative;
+        box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        a{
+            text-decoration: none;
+            display: block;
+            overflow: hidden;
+        }
+        img{
+            max-width: 100%;
+            vertical-align: middle;
+        }
+        .price{
+            position: absolute;
+            top: 14px;
+            right: 9px;
+            background: #c81821;
+            padding: 0 7px;
+            color: #fff;
+            font-size: 10px;
+            font-weight: 600;
+        }
+        .product-details {
+            border-top: 2px solid #c81821;
+            .product-head{
+                text-transform: capitalize;
+                font-size: 13px;
+                margin: 1rem 0 0;
+                text-align: center;
+                color: #000;
+            }
+            p{
+                font-size: 13px;
+                margin: 0;
+                text-align: center;
+                padding: .3rem 0 .5rem;
+                color: #000;
+            }
+        }
+    }
+
+
+
+
+
+}
+
+
